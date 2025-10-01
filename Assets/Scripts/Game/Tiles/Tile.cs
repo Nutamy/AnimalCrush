@@ -1,16 +1,23 @@
 using UnityEngine;
 
-public class Tile : MonoBehaviour
+namespace Game.Tiles
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [RequireComponent(typeof(SpriteRenderer))]
+    public class Tile : MonoBehaviour
     {
-        
-    }
+        public TileConfig TileConfig { get; private set; }
+        public bool IsInteractable { get; private set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public bool IsMatched { get; private set; }
+
+        public void SetTileConfig(TileConfig tileConfig)
+        {
+            TileConfig = tileConfig;
+            IsInteractable = tileConfig.IsInteractable;
+            IsMatched = false;
+            GetComponent<SpriteRenderer>().sprite = tileConfig.Sprite;
+        }
+
+        public bool SetMatch(bool value) => IsMatched = value;
     }
 }
