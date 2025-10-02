@@ -641,7 +641,9 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 2062546638}
+  - {fileID: 2033090808}
   _gameBoard: {fileID: 2062546639}
+  _loader: {fileID: 2033090809}
 --- !u!4 &1183881886
 Transform:
   m_ObjectHideFlags: 0
@@ -732,6 +734,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478371681}
   m_CullTransparentMesh: 1
+--- !u!1 &2033090808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033090810}
+  - component: {fileID: 2033090809}
+  m_Layer: 0
+  m_Name: GameSystemScripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2033090809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033090808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc700bc09e24a7592484ff462172392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tilePrefub: {fileID: 3545998912798966876, guid: 2b337e381c2197a4cb46f34d26e07de9, type: 3}
+  _tileSetConfig: {fileID: 11400000, guid: 7e7323400a7c28b4e8c8429bcddbd0e0, type: 2}
+--- !u!4 &2033090810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033090808}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062546638
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da67deeadec4cd58d42fb5894a60af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tilePrefub: {fileID: 3545998912798966876, guid: 2b337e381c2197a4cb46f34d26e07de9, type: 3}
   _tileConfig: {fileID: 11400000, guid: 3f9f11be6d4f68845a4e2841eb294e45, type: 2}
 --- !u!4 &2062546640
 Transform:
@@ -789,3 +836,4 @@ SceneRoots:
   - {fileID: 179698740}
   - {fileID: 1183881886}
   - {fileID: 2062546640}
+  - {fileID: 2033090810}
