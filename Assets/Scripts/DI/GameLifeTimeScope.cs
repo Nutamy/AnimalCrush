@@ -14,12 +14,14 @@ namespace DI
     {
         [SerializeField] private GameBoard _gameBoard;
         [SerializeField] private GameResourcesLoader _loader;
+        [SerializeField] private BlankTileSetup _blankTileSetup;
         
         protected override void Configure(IContainerBuilder builder)
         {
             builder.Register<Grid>(Lifetime.Singleton);
             builder.RegisterInstance(_gameBoard);
             builder.RegisterInstance(_loader);
+            builder.RegisterInstance(_blankTileSetup);
             builder.Register<SetupCamera>(Lifetime.Singleton);
             builder.Register<GameDebug>(Lifetime.Singleton);
             builder.Register<TilePool>(Lifetime.Singleton);
